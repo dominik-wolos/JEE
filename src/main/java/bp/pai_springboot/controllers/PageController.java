@@ -31,13 +31,11 @@ public class PageController {
     public String listaZadan() {
         StringBuilder odp = new StringBuilder();
 
-        // Generowanie testowych zadań
-        Zadanie z;
-        double k = 1000;
-        boolean wyk = false;
-
-        // Sprawdź czy już są jakieś zadania, jeśli nie - wygeneruj testowe
         if (rep.count() < 10) {
+            Zadanie z;
+            double k = 1000;
+            boolean wyk = false;
+
             for (int i = 1; i <= 10; i++) {
                 z = new Zadanie();
                 z.setNazwa("zadanie " + i);
@@ -50,7 +48,6 @@ public class PageController {
             }
         }
 
-        // Pobierz i wyświetl wszystkie zadania
         odp.append("<h2>Lista wszystkich zadań:</h2>");
         for (Zadanie i : rep.findAll()) {
             odp.append(i).append("<br>");

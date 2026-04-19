@@ -32,7 +32,6 @@ public class Zadanie {
         this.opis = "Zadanie do wykonania";
     }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
